@@ -1,0 +1,54 @@
+﻿<!--
+Author: Ranjithprabhu K
+Page Description: Dashboard page
+Date: 05 Jan 2016
+-->
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+	
+		<div class="card">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Docker Image</h3>
+  <div class="container" style="width:792px;height:400px;">
+	
+       <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+				<br>
+				<fieldset class="form-group">
+                    <label>Image Name:</label>
+                    <input class="form-control" ng-model="imgname" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="projname" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+                <fieldset class="form-group">
+                    <label>GIT Path:</label>
+                    <input class="form-control" ng-model="git" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Base Image:</label>
+                    <input class="form-control" ng-model="baseimg" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+            </form>
+<br>
+			<div class="pull-right" style="position:absolute;left:10px;">
+                                <md-button class="md-raised md-primary" type="submit" data-ng-click="vm.submitForm();"> Create Docker Image</md-button>
+                            </div><br>
+							<div ng-if="results" style="position:absolute;left:360px;">
+{{fetcheddata}}
+ <button ng-click="close()">close</button>
+</div>
+			
+        </div>
+    </div>
+	</div>
+	</div>
+    </section><!-- /.content -->
+

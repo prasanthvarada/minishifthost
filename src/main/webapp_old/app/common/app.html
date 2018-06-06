@@ -1,0 +1,59 @@
+﻿<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a class="logo" style="background-color:#4da6ff;">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>VM</b></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>VM</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar" role="navigation" style="height:10px;">
+            <!-- Sidebar toggle button-->
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu" style="position:absolute;right:0px;top:0px;">
+                        <a ui-sref="login" class="btn btn-flat" style="color:#4da6ff;">Log Out</a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <!-- sidebar -->
+        <section class="sidebar">
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button type="button" name="search" id="search-btn" class="btn btn-flat" data-ng-click="vm.search();"><i class=" fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+            <ul class="sidebar-menu">
+                <li class="treeview" ui-sref-active="active" ng-click="vm.sideBar();" data-ng-repeat="menu in vm.menuItems">
+                    <a ui-sref="app.{{menu.state}}">
+                        <i class="fa fa-{{menu.icon}}"></i> <span>{{menu.title}}</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+
+    <div class="content-wrapper" style="min-height:550px">
+        <ui-view></ui-view>
+    </div>
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.3.2
+            </div>
+            <strong>Copyright &copy; <a href="https://opensource.org/licenses/MIT" target="_blank">The MIT License (MIT)</a>.</strong> All rights reserved.
+        </footer>
+    </div>

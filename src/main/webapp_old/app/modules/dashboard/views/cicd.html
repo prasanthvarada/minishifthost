@@ -1,0 +1,40 @@
+
+    <section class="content-header">
+	
+		<div class="card">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CI / CD</h3>
+  <div class="container" style="width:792px;height:400px;">
+	
+       <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="proj" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>YAML / JSON File Path:</label>
+                    <input class="form-control" ng-model="filepath" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group"><!-- <input type="file" name="browse"> --> <input type="file" id="cicd" fd-input />
+            </form>
+<br>
+			<div class="pull-right" style="position:absolute;left:5px;">
+                                <md-button class="md-raised md-primary" type="submit" data-ng-click="vm.submitForm();"> Create Jenkins Pipe Line</md-button>
+                            </div><br>
+							<div ng-if="results" style="position:absolute;left:360px;">
+{{fetcheddata}}
+ <button ng-click="close()">close</button>
+</div>
+			
+        </div>
+    </div>
+	</div>
+	</div>
+    </section>
+

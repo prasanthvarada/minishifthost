@@ -1,0 +1,70 @@
+<!--
+Author: Ranjithprabhu K
+Page Description: Dashboard page
+Date: 05 Jan 2016
+-->
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+	<div class="card">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;Create/Deploy Application</h3>
+  <div class="container" style="width:792px;min-height:450px;">
+           <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="proj" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Application Name:</label>
+                    <input class="form-control" ng-model="app" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Deployment As:</label>
+                    <select class="form-control" ng-model="type" ng-change="report()" style="display:inline-block;position:absolute;left:220px;height:33px">
+                        <option value="GIT">GIT Source</option>
+                        <option value="WAR">WAR</option>
+                    </select>
+                </fieldset>
+				<br>
+                <fieldset class="form-group">
+                    <label>GIT/WAR File Path:</label>
+                    <input class="form-control" placeholder="Enter text" ng-model="git" style="display: inline-block;position:absolute;left:220px;">&nbsp;
+                </fieldset>
+				
+				 <div ng-if="browse">
+				 <fieldset class="form-group"><input type="file" name="browse">
+                </fieldset>
+				</div>
+				
+				<div id="loader" ng-if="loader"></div>
+
+            </form>
+<br>
+			<div style="position:absolute;left:10px;">
+                                <md-button class="md-raised md-primary" type="submit" data-ng-click="vm.submitForm();"> Host Application</md-button>
+                            </div>
+							<br>
+							<div ng-if="results" style="position:absolute;left:360px;">
+{{fetcheddata}}
+ <button ng-click="close()">close</button>
+</div>
+			
+        </div>
+    </div>
+					<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+  <button ng-click="close()">close</button>
+</div>
+  </div>
+</div>
+
+    </section><!-- /.content -->
+

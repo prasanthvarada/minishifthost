@@ -1,0 +1,235 @@
+2018-04-25 19:19:51.298  INFO 8612 --- [http-nio-8080-exec-9] com.wipro.HomeController                 : /Host Application - > [cmd, /c, oc new-project proj1&& oc new-app codecentric/springboot-maven3-centos~https://github.com/prasanthvarada/springapp --name=app1]
+Already on project "proj1" on server "https://192.168.99.100:8443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+
+to build a new example application in Ruby.
+--> Found Docker image 5d0747c (2 months old) from Docker Hub for "codecentric/springboot-maven3-centos"
+
+    Spring Boot Maven 3 
+    ------------------- 
+    Platform for building and running Spring Boot applications
+
+    Tags: builder, java, java8, maven, maven3, springboot
+
+    * An image stream will be created as "springboot-maven3-centos:latest" that will track the source image
+    * A source build using source code from https://github.com/prasanthvarada/springapp will be created
+      * The resulting image will be pushed to image stream "app1:latest"
+      * Every time "springboot-maven3-centos:latest" changes a new build will be triggered
+    * This image will be deployed in deployment config "app1"
+    * Port 8080/tcp will be load balanced by service "app1"
+      * Other containers can access this service through the hostname "app1"
+
+--> Creating resources ...
+    imagestream "springboot-maven3-centos" created
+    imagestream "app1" created
+    buildconfig "app1" created
+    deploymentconfig "app1" created
+    service "app1" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/app1' to track its progress.
+    Run 'oc status' to view your app.
+~~~~Here is the standard errors of the command (if any):
+
+2018-04-25 19:22:07.202  INFO 8612 --- [http-nio-8080-exec-2] com.wipro.HomeController                 : /create docker s2i image - > s2i build request submitted...... with reqId:20180425072206Process Done already
+2018-04-25 19:28:51.474  INFO 8612 --- [http-nio-8080-exec-9] com.wipro.HomeController                 : /Pipeline Creation - > [cmd, /c, oc project proj1&& oc create -f D:\Pr364954\E_Drive\TechStuff\Redhat\mini\mini_solutions\yml_file_testfromcode.yml]
+Already on project "proj1" on server "https://192.168.99.100:8443".
+buildconfig "myjenkinpipelinetwo" created
+~~~~Here is the standard errors of the command (if any):
+
+2018-04-25 19:37:10.536  INFO 8612 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@18e2989: startup date [Wed Apr 25 18:51:12 IST 2018]; root of context hierarchy
+2018-04-25 19:37:19.325  INFO 8612 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-04-25 19:37:21.301  INFO 8612 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-25 19:37:22.493  INFO 8612 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-04-25 19:37:29.210  INFO 8612 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-05-04 12:11:37.275  INFO 15904 --- [main] com.wipro.Application                    : Starting Application on L-156104937 with PID 15904 (D:\Pr364954\E_Drive\JHipster\genbuilds\minishifthost\target\classes started by PR364954 in D:\Pr364954\E_Drive\JHipster\genbuilds\minishifthost)
+2018-05-04 12:11:37.323  INFO 15904 --- [main] com.wipro.Application                    : No active profile set, falling back to default profiles: default
+2018-05-04 12:11:39.138  INFO 15904 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79e4304d: startup date [Fri May 04 12:11:39 IST 2018]; root of context hierarchy
+2018-05-04 12:11:53.114  INFO 15904 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-05-04 12:11:55.150  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ee3732ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-04 12:11:58.721  INFO 15904 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-04 12:11:58.788  INFO 15904 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-05-04 12:11:58.791  INFO 15904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-05-04 12:11:59.732  INFO 15904 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-04 12:11:59.736  INFO 15904 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 20661 ms
+2018-05-04 12:12:02.035  INFO 15904 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-04 12:12:02.043  INFO 15904 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-04 12:12:02.044  INFO 15904 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-04 12:12:02.048  INFO 15904 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-04 12:12:02.124  INFO 15904 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-04 12:12:04.355  INFO 15904 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-04 12:12:04.395  INFO 15904 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-04 12:12:04.999  INFO 15904 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2018-05-04 12:12:05.006  INFO 15904 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-04 12:12:05.014  INFO 15904 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-05-04 12:12:07.333  INFO 15904 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-05-04 12:12:08.196  INFO 15904 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-04 12:12:08.905  INFO 15904 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-04 12:12:09.880  INFO 15904 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-05-04 12:12:09.886  INFO 15904 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-05-04 12:12:11.289  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79e4304d: startup date [Fri May 04 12:11:39 IST 2018]; root of context hierarchy
+2018-05-04 12:12:11.521  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cicd],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getPipeline(java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.532  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callcmds],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.StringBuffer> com.wipro.HomeController.executeCommandsFile() throws java.net.URISyntaxException
+2018-05-04 12:12:11.534  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hostapp],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getHostApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.535  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.pushImgage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.536  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dockerimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getDockerImage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.538  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pullimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.pullImgage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.540  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dockerrun],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.dockerRun(java.lang.String) throws java.net.URISyntaxException
+2018-05-04 12:12:11.551  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-04 12:12:11.554  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-04 12:12:11.634  INFO 15904 --- [main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: ServletContext resource [/index.html]
+2018-05-04 12:12:11.654  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-05-04 12:12:11.674  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 12:12:11.675  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 12:12:11.807  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 12:12:13.608  INFO 15904 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-04 12:12:14.070  INFO 15904 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-04 12:12:14.085  INFO 15904 --- [main] com.wipro.Application                    : Started Application in 39.275 seconds (JVM running for 85.196)
+2018-05-04 12:12:27.843  INFO 15904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-04 12:12:27.843  INFO 15904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-04 12:12:28.088  INFO 15904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 241 ms
+2018-05-04 12:15:16.510  INFO 15904 --- [http-nio-8080-exec-8] com.wipro.HomeController                 : /Host Application - > [cmd, /c, oc new-project proj1&& oc new-app codecentric/springboot-maven3-centos~https://github.com/prasanthvarada/springapp --name=app1]
+Now using project "proj1" on server "https://192.168.99.100:8443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+
+to build a new example application in Ruby.
+--> Found Docker image 5d0747c (2 months old) from  for "codecentric/springboot-maven3-centos:latest"
+
+    Spring Boot Maven 3 
+    ------------------- 
+    Platform for building and running Spring Boot applications
+
+    Tags: builder, java, java8, maven, maven3, springboot
+
+    * A source build using source code from https://github.com/prasanthvarada/springapp will be created
+      * The resulting image will be pushed to image stream "app1:latest"
+      * Use 'start-build' to trigger a new build
+    * This image will be deployed in deployment config "app1"
+    * Port 8080/tcp will be load balanced by service "app1"
+      * Other containers can access this service through the hostname "app1"
+
+--> Creating resources ...
+    imagestream "app1" created
+    buildconfig "app1" created
+    deploymentconfig "app1" created
+    service "app1" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/app1' to track its progress.
+    Run 'oc status' to view your app.
+~~~~Here is the standard errors of the command (if any):
+error line:W0504 12:15:08.298796    4816 dockerimagelookup.go:220] Docker registry lookup failed: Get https://registry-1.docker.io/v2/: read tcp 10.0.2.15:37748->35.169.231.249:443: read: connection reset by peererror line:W0504 12:15:08.424905    4816 newapp.go:317] Could not find an image stream match for "codecentric/springboot-maven3-centos:latest". Make sure that a Docker image with that tag is available on the node for the build to succeed.
+2018-05-04 12:19:52.208  INFO 15904 --- [http-nio-8080-exec-5] com.wipro.HomeController                 : Pulling the Image process started...
+2018-05-04 12:19:53.084  INFO 15904 --- [http-nio-8080-exec-5] com.wipro.HomeController                 : /pull image - > Image Pull request submitted...... with reqId:20180504121952Process submission Done
+2018-05-04 12:41:22.028  INFO 15904 --- [http-nio-8080-exec-3] com.wipro.HomeController                 : Publishing the Image process started...
+2018-05-04 12:41:24.332  INFO 15904 --- [http-nio-8080-exec-3] com.wipro.HomeController                 : /push image - > Image push request submitted...... with reqId:20180504124122Process submission Done
+2018-05-04 12:54:23.227  INFO 15904 --- [http-nio-8080-exec-1] com.wipro.HomeController                 : Publishing the Image process started...
+2018-05-04 12:54:25.080  INFO 15904 --- [http-nio-8080-exec-1] com.wipro.HomeController                 : /push image - > Image push request submitted...... with reqId:20180504125423Process submission Done
+2018-05-04 13:02:39.093  INFO 15904 --- [http-nio-8080-exec-8] com.wipro.HomeController                 : /create docker s2i image - > s2i build request submitted...... with reqId:20180504010235Process Done already
+2018-05-04 13:12:35.035  INFO 15904 --- [http-nio-8080-exec-10] com.wipro.HomeController                 : /Pipeline Creation - > [cmd, /c, oc project proj1&& oc create -f D:\Pr364954\E_Drive\TechStuff\Redhat\mini\mini_solutions\yml_file_testfromcode.yml]
+Already on project "proj1" on server "https://192.168.99.100:8443".
+buildconfig "myjenkinpipelinethree" created
+~~~~Here is the standard errors of the command (if any):
+
+2018-05-04 15:09:50.018  INFO 15904 --- [http-nio-8080-exec-1] com.wipro.HomeController                 : /Host Application - > [cmd, /c, oc new-project jenkinspring&& oc new-app codecentric/springboot-maven3-centos~https://github.com/prasanthvarada/springapp --name=springbootapp]
+~~~~Here is the standard errors of the command (if any):
+error line:Error from server (AlreadyExists): project.project.openshift.io "jenkinspring" already exists
+2018-05-04 18:55:46.949  INFO 15904 --- [http-nio-8080-exec-8] com.wipro.HomeController                 : /Host Application - > [cmd, /c, oc new-project proj1&& oc new-app codecentric/springboot-maven3-centos~https://github.com/prasanthvarada/storetqvone --name=springbootapp]
+Now using project "proj1" on server "https://192.168.99.100:8443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+
+to build a new example application in Ruby.
+--> Found Docker image 2844e05 (7 days old) from Docker Hub for "codecentric/springboot-maven3-centos"
+
+    Spring Boot Maven 3 
+    ------------------- 
+    Platform for building and running Spring Boot applications
+
+    Tags: builder, java, java8, maven, maven3, springboot
+
+    * An image stream will be created as "springboot-maven3-centos:latest" that will track the source image
+    * A source build using source code from https://github.com/prasanthvarada/storetqvone will be created
+      * The resulting image will be pushed to image stream "springbootapp:latest"
+      * Every time "springboot-maven3-centos:latest" changes a new build will be triggered
+    * This image will be deployed in deployment config "springbootapp"
+    * Port 8080/tcp will be load balanced by service "springbootapp"
+      * Other containers can access this service through the hostname "springbootapp"
+
+--> Creating resources ...
+    imagestream "springboot-maven3-centos" created
+    imagestream "springbootapp" created
+    buildconfig "springbootapp" created
+    deploymentconfig "springbootapp" created
+    service "springbootapp" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/springbootapp' to track its progress.
+    Run 'oc status' to view your app.
+~~~~Here is the standard errors of the command (if any):
+
+2018-05-04 19:43:59.617  INFO 15904 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79e4304d: startup date [Fri May 04 12:11:39 IST 2018]; root of context hierarchy
+2018-05-04 19:44:04.942  INFO 15904 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-04 19:44:05.334  INFO 15904 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-04 19:44:06.668  INFO 15904 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-05-04 19:44:09.280  INFO 15904 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-05-04 19:50:27.872  INFO 15284 --- [main] com.wipro.Application                    : Starting Application on L-156104937 with PID 15284 (D:\Pr364954\E_Drive\JHipster\genbuilds\minishifthost\target\classes started by PR364954 in D:\Pr364954\E_Drive\JHipster\genbuilds\minishifthost)
+2018-05-04 19:50:28.023  INFO 15284 --- [main] com.wipro.Application                    : No active profile set, falling back to default profiles: default
+2018-05-04 19:50:29.672  INFO 15284 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb88052: startup date [Fri May 04 19:50:29 IST 2018]; root of context hierarchy
+2018-05-04 19:50:36.872  INFO 15284 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-05-04 19:50:38.239  INFO 15284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65c33faa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-04 19:50:40.216  INFO 15284 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-05-04 19:50:40.260  INFO 15284 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-05-04 19:50:40.261  INFO 15284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-05-04 19:50:40.813  INFO 15284 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-04 19:50:40.815  INFO 15284 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11148 ms
+2018-05-04 19:50:42.015  INFO 15284 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-04 19:50:42.025  INFO 15284 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-04 19:50:42.026  INFO 15284 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-04 19:50:42.030  INFO 15284 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-04 19:50:42.035  INFO 15284 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-04 19:50:50.298  INFO 15284 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-04 19:50:50.745  INFO 15284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-04 19:50:51.919  INFO 15284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2018-05-04 19:50:51.946  INFO 15284 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-04 19:50:51.952  INFO 15284 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-05-04 19:50:54.489  INFO 15284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2018-05-04 19:50:55.095  INFO 15284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-04 19:50:56.054  INFO 15284 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-04 19:50:58.681  INFO 15284 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-05-04 19:50:58.696  INFO 15284 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-05-04 19:51:01.789  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb88052: startup date [Fri May 04 19:50:29 IST 2018]; root of context hierarchy
+2018-05-04 19:51:02.349  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.pushImgage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.357  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dockerimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getDockerImage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.358  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dockerrun],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.dockerRun(java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.370  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pullimg],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.pullImgage(java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.375  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/cicd],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getPipeline(java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.376  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/callcmds],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.StringBuffer> com.wipro.HomeController.executeCommandsFile() throws java.net.URISyntaxException
+2018-05-04 19:51:02.383  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hostapp],methods=[GET],produces=[text/plain]}" onto public java.lang.String com.wipro.HomeController.getHostApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.net.URISyntaxException
+2018-05-04 19:51:02.406  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-04 19:51:02.409  INFO 15284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-04 19:51:02.515  INFO 15284 --- [main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: ServletContext resource [/index.html]
+2018-05-04 19:51:02.556  INFO 15284 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-05-04 19:51:02.658  INFO 15284 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 19:51:02.660  INFO 15284 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 19:51:02.764  INFO 15284 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-04 19:51:06.489  INFO 15284 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-04 19:51:07.069  INFO 15284 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-05-04 19:51:07.101  INFO 15284 --- [main] com.wipro.Application                    : Started Application in 40.746 seconds (JVM running for 66.724)
+2018-05-04 19:52:13.043  INFO 15284 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-04 19:52:13.050  INFO 15284 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-04 19:52:13.201  INFO 15284 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 150 ms
+2018-05-04 20:33:33.223  INFO 15284 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb88052: startup date [Fri May 04 19:50:29 IST 2018]; root of context hierarchy
+2018-05-04 20:33:39.246  INFO 15284 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-04 20:33:39.991  INFO 15284 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-04 20:33:40.832  INFO 15284 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-05-04 20:33:43.231  INFO 15284 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete

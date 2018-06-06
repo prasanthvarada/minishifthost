@@ -1,0 +1,24 @@
+The push refers to a repository [172.30.1.1:5000/proj1/springboot-sample-app]
+725952fbee6e: Preparing
+b685f5b55a57: Preparing
+ede32a6757ce: Preparing
+57b59f1716b7: Preparing
+a302ee51c9ce: Preparing
+cb96aea742c3: Preparing
+f1bbaf33b49c: Preparing
+4b1e8db0189a: Preparing
+34e7b85d83e4: Preparing
+f1bbaf33b49c: Waiting
+4b1e8db0189a: Waiting
+34e7b85d83e4: Waiting
+cb96aea742c3: Waiting
+ede32a6757ce: Pushed
+b685f5b55a57: Pushed
+cb96aea742c3: Pushed
+4b1e8db0189a: Pushed
+57b59f1716b7: Pushed
+725952fbee6e: Pushed
+f1bbaf33b49c: Pushed
+34e7b85d83e4: Pushed
+a302ee51c9ce: Pushed
+v1: digest: sha256:cc4615a777b60076c0f35e37bf5ecb8ccd866f4f0f65f44c1095e7c701fe687e size: 2208

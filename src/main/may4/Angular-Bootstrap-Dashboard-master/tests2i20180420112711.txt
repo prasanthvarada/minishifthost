@@ -1,0 +1,34 @@
+[cmd, /c, oc new-project testoneproj&& oc new-app codecentric/springboot-maven3-centos~https://github.com/codecentric/springboot-sample-app --name=testapp]
+Now using project "testoneproj" on server "https://192.168.99.100:8443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+
+to build a new example application in Ruby.
+--> Found Docker image 5d0747c (2 months old) from Docker Hub for "codecentric/springboot-maven3-centos"
+
+    Spring Boot Maven 3 
+    ------------------- 
+    Platform for building and running Spring Boot applications
+
+    Tags: builder, java, java8, maven, maven3, springboot
+
+    * An image stream will be created as "springboot-maven3-centos:latest" that will track the source image
+    * A source build using source code from https://github.com/codecentric/springboot-sample-app will be created
+      * The resulting image will be pushed to image stream "testapp:latest"
+      * Every time "springboot-maven3-centos:latest" changes a new build will be triggered
+    * This image will be deployed in deployment config "testapp"
+    * Port 8080/tcp will be load balanced by service "testapp"
+      * Other containers can access this service through the hostname "testapp"
+
+--> Creating resources ...
+    imagestream "springboot-maven3-centos" created
+    imagestream "testapp" created
+    buildconfig "testapp" created
+    deploymentconfig "testapp" created
+    service "testapp" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/testapp' to track its progress.
+    Run 'oc status' to view your app.
+~~~~Here is the standard errors of the command (if any):

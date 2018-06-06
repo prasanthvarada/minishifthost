@@ -1,0 +1,67 @@
+
+    <section class="content-header">
+       <div class="row">
+        <div class="col-lg-6">
+		<button class="btn btn-info btn-lg hover" style="background-color: #b3d9ff;border: none;color: black;padding: 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;width:35%;" ng-click="pullImage()" >PULL IMAGE</button>
+		<button class="btn btn-info btn-lg hover" style="position:absolute;left:240px;background-color: #b3d9ff;border: none;color: black;padding: 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;width:35%;" ng-click="pushImage()">PUSH IMAGE</button>
+		<br>
+		<br>
+		<div ng-show="pulldiv">
+		<fieldset class="form-group">
+                    <label>Image Name:</label>
+                    <select class="form-control" ng-model="importimg" ng-change="report()" style="display:inline-block;position:absolute;left:220px;height:37px">
+                        <option value="jboss-webserver-3/webserver30-tomcat8-openshift">Tomcat8-openshift</option>
+                        <option value="rhscl/mysql-57-rhel7">MySQL</option>
+						<option value="redhat-openjdk18-openshift">redhat-openjdk</option>
+						<option value="Wildfly">Wildfly</option>
+						<option value="Node.js">Node.js</option>
+                    </select>
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Registry:</label>
+                    <input class="form-control" ng-model="registry" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="ocproj" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<div style="position:absolute;left:10px;">
+                                <md-button class="md-raised md-primary" type="submit" data-ng-click="vm.submitPullForm();"> Pull / Import</md-button>
+                            </div><br>
+							<br><br>
+							<div ng-if="pullresults" style="font-family:Times New Roman;text-align: center;">
+{{fetchedpulldata}}
+<br> <button ng-click="close()">close</button>
+</div>
+		</div>
+		<div ng-show="pushdiv">
+		<fieldset class="form-group">
+                    <label>Image Name:</label>
+                    <input class="form-control" ng-model="img" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="proj" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>Target Image Name:</label>
+                    <input class="form-control" ng-model="targetimg" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<div style="position:absolute;left:10px;">
+                                <md-button class="md-raised md-primary" type="submit" data-ng-click="vm.submitPushForm();"> Push / Publish</md-button>
+                            </div><br>
+							<br><br>
+							<div ng-if="results" style="font-family:Times New Roman;text-align: center;">
+{{fetcheddata}}
+<br> <button ng-click="close()">close</button>
+</div>
+		</div>
+            </form>
+        </div>
+    </div>
+    </section>
+

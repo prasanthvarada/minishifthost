@@ -1,0 +1,58 @@
+
+    <section class="content-header">
+	
+		<div class="card">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CI / CD</h3>
+  <div class="container" style="width:780px;height:400px;">
+	
+       <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+				<br>
+				<fieldset class="form-group">
+                    <label>Project Name:</label>
+                    <input class="form-control" ng-model="proj" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group">
+                    <label>YAML / JSON File Path:</label>
+                    <input class="form-control" ng-model="filepath" style="display: inline-block;position:absolute;left:220px;">
+                </fieldset>
+				<br>
+				<fieldset class="form-group"><!-- <input type="file" name="browse"> --> <input type="file"  onchange="angular.element(this).scope().setFile(this)" id="cicd"/>
+            </form>
+<br>
+			<div class="pull-right" style="position:absolute;left:5px;">
+                                <md-button class="md-raised md-primary" type="submit" data-toggle="modal" data-target="#myModal" data-ng-click="vm.submitForm();"> Create Jenkins Pipe Line</md-button>
+                            </div><br>
+							<br><br>
+							<div ng-if="results" style="font-family:Times New Roman;text-align: center;">
+{{fetcheddata}}
+<br> <button ng-click="close()">close</button>
+</div>
+			
+        </div>
+    </div>
+	</div>
+	
+	 <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Logs</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{fetcheddata}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" style="color:white;" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	</div>
+    </section>
+

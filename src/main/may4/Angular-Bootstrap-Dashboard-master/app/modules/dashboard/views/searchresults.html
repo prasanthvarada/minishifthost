@@ -1,0 +1,288 @@
+<!--
+Author: Ranjithprabhu K
+Page Description: Dashboard page
+Date: 05 Jan 2016
+-->
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+                
+				<fieldset class="form-group">
+				<div class="mom">
+				 <div class="child">
+        <div class="childinner">
+                    <label>Dept-Plan Level:</label>
+					<br>
+					<input id="partitioned" type="text" ng-model="DEPT_NUM" maxlength="3">
+					<input id="partitioned1" type="text" ng-model="GROUPS" maxlength="3">
+					<input id="partitioned1" type="text" ng-model="PAGE" maxlength="3">
+					</div>
+					</div>
+					 <div class="child">
+        <div class="childinner">
+		 <label>Trans Y/N?:</label>&nbsp;
+					 <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1">Yes
+                    </label>&nbsp;
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2" checked="">No
+                    </label>
+					</div>
+		</div>
+		</div>
+					</div>
+                </fieldset>
+				
+								<div class="form-group">
+                    <label>Catg/Class:</label>
+					<br>
+                  <input id="partitioned2" type="text" value={{catgnumone}} maxlength="4" readonly>
+					<input id="partitioned2" type="text" value={{catgnumtwo}} maxlength="4" readonly>
+					<input id="partitioned2" type="text" value={{catgnumthree}} maxlength="4" readonly>
+					<input id="partitioned2" type="text" value={{catgnumfour}} maxlength="4" readonly>
+					<input id="partitioned2" type="text" value={{catgnumfive}} maxlength="4" readonly>
+                </div>
+				
+								 <fieldset class="form-group">
+                    <label>Plan Desc:</label>
+                    <input class="form-control" value={{plandesc}} readonly>
+                </fieldset>
+				
+            </form>
+
+        </div>
+        <div class="col-lg-6">
+            
+
+            <form role="form">
+				
+				<fieldset class="form-group">
+                    <label>Blend OTS?:</label>
+					<br>
+					<input id="partitioned" type="text" maxlength="2">
+					<input id="partitioned1" type="text" maxlength="3">
+					<input id="partitioned" type="text" maxlength="2">
+                </fieldset>	
+				
+								<fieldset class="form-group">
+                    <label>AVG S/S:</label>
+                    <input class="form-control">
+                </fieldset>
+				  
+            </form>
+			</div>
+    </div>
+
+	<div class="row">
+	<div class="col-md-12">
+	<label>FILTERS:</label>
+	<select class="form-control" ng-change="onCategoryChange(itemSelected)" ng-model="itemSelected">
+  <option value="ALL">ALL</option>
+  <option value="WHSE">WHSE</option>
+  <option value="ATTR LIST">ATTR LIST</option>
+  <option value="CHLST">CHLST</option>
+  <option value="ALRDY ADJ">ALRDY ADJ</option>
+  <option value="ZONE">ZONE</option>
+  <option value="SORT">SORT</option>
+  <option value="OTS RANGE">OTS RANGE</option>
+  <option value="FROM">FROM</option>
+  <option value="TO">TO</option>
+  <option value="STR">STR</option>
+  <option value="S/S">S/S</option>
+</select>
+	<div class="filterdiv">
+        <div ng-show="ALLdiv">
+                    <label>ALL:</label>
+					<br>
+					<input class="form-control" style="min-width:4px;">
+					</div>
+        <div ng-show="WHSEdiv">
+		 <label>WHSE:</label>&nbsp;
+                    <input class="form-control" id="partitionedSpec" type="text" ng-model="dcnum" maxlength="3">
+		</div>
+        <div ng-show="ATTRdiv">
+		 <label>ATTR LIST:</label>&nbsp;
+                    <input class="form-control" id="partitionedSattr" type="text" maxlength="4">
+		</div>
+        <div ng-show="CHLSTdiv">
+		 <label>CHLST:</label>&nbsp;
+                    <input class="form-control" style="min-width:4px;" type="text">
+		</div>
+        <div ng-show="ALRDYdiv">
+		 <label>ALRDY ADJ:</label>&nbsp;
+                    <input class="form-control" style="min-width:4px;" type="text">
+		</div>
+        <div ng-show="ZONEdiv">
+                    <label>ZONE:</label>
+					<br>
+					<input id="partitioned" type="text" maxlength="2" style="height:40px;">
+					<input id="partitioned" type="text" maxlength="2" style="height:40px;">
+					<input id="partitioned" type="text" maxlength="2" style="height:40px;">
+					</div>
+        <div ng-show="SORTdiv">
+                    <label>SORT:</label>
+					<br>
+					<input style="width:80px;height:40px;">
+					</div>
+        <div ng-show="OTSRANGEdiv">
+		 <label>OTS RANGE:</label>&nbsp;
+		 <br>
+                    <input style="width:80px;height:40px;">
+		</div>
+        <div ng-show="FROMdiv">
+		 <label>FROM:</label>&nbsp;
+		 <br>
+                    <input style="width:80px;height:40px;">
+		</div>
+        <div ng-show="TOdiv">
+		 <label>TO:</label>&nbsp;
+		 <br>
+                    <input style="width:80px;height:40px;">
+		</div>
+        <div ng-show="STRdiv">
+		 <label>STR:</label>&nbsp;
+		 <br>
+                    <input ng-model="strnum" style="width:80px;height:40px;">
+		</div>
+        <div ng-show="SSdiv">
+		 <label>S/S:</label>&nbsp;
+		 <br>
+                    <input style="width:80px;height:40px;">
+		</div>
+	</div>
+	<br>
+		<button type="button" class="btn btn-primary" ng-click=submitMyForm()>Search</button>
+</div>
+<div class="container" ng-if="check">
+	<div class="row">
+		
+        
+        <div class="col-md-12">
+        <div class="table-responsive">
+
+                
+              <table style="width:100%">
+                   
+                   <thead>
+		 <th>
+          LAST SALES
+          <a href="#" ng-click="sort('lwsales')" class="sortDir" ng-class="{ active: isSorted('lwsales') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-lwsales')" class="sortDir" ng-class="{ active: isSorted('-lwsales' ) }">&#x25BC;</a>
+        </th>
+        <th>
+          WEEK INV 
+          <a href="#" ng-click="sort('invtplnd')" class="sortDir" ng-class="{ active: isSorted('invtplnd') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-invtplnd')" class="sortDir" ng-class="{ active: isSorted('-invtplnd' ) }">&#x25BC;</a>
+        </th>
+        <th>
+         STR NO
+          <a href="#" ng-click="sort('strnum')" class="sortDir" ng-class="{ active: isSorted('strnum') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-strnum')" class="sortDir" ng-class="{ active: isSorted('-strnum' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         S/S
+          <a href="#" ng-click="sort('ssratturn')" class="sortDir" ng-class="{ active: isSorted('ssratturn') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-ssratturn')" class="sortDir" ng-class="{ active: isSorted('-ssratturn' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         WEEK1 SALES
+          <a href="#" ng-click="sort('salesplnd')" class="sortDir" ng-class="{ active: isSorted('salesplnd') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-salesplnd')" class="sortDir" ng-class="{ active: isSorted('-salesplnd' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         WEEK2 SALES
+          <a href="#" ng-click="sort('salesplndwktwo')" class="sortDir" ng-class="{ active: isSorted('salesplndwktwo') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-salesplndwktwo')" class="sortDir" ng-class="{ active: isSorted('-salesplndwktwo' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         SALES BAL
+          <a href="#" ng-click="sort('salesplndbal')" class="sortDir" ng-class="{ active: isSorted('salesplndbal') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-salesplndbal')" class="sortDir" ng-class="{ active: isSorted('-salesplndbal' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         END INV
+          <a href="#" ng-click="sort('twinvt')" class="sortDir" ng-class="{ active: isSorted('twinvt') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-twinvt')" class="sortDir" ng-class="{ active: isSorted('-twinvt' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         WK OTS
+          <a href="#" ng-click="sort('otsweeks')" class="sortDir" ng-class="{ active: isSorted('otsweeks') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-otsweeks')" class="sortDir" ng-class="{ active: isSorted('-otsweeks' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         LW DIST
+          <a href="#" ng-click="sort('lwdistreg')" class="sortDir" ng-class="{ active: isSorted('lwdistreg') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-lwdistreg')" class="sortDir" ng-class="{ active: isSorted('-lwdistreg' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         % OPEN
+          <a href="#" ng-click="sort('origpct')" class="sortDir" ng-class="{ active: isSorted('origpct') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-origpct')" class="sortDir" ng-class="{ active: isSorted('-origpct' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         WTD DIST
+          <a href="#" ng-click="sort('wtddist')" class="sortDir" ng-class="{ active: isSorted('wtddist') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-wtddist')" class="sortDir" ng-class="{ active: isSorted('-wtddist' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         CURR OTS
+          <a href="#" ng-click="sort('origots')" class="sortDir" ng-class="{ active: isSorted('origots') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-origots')" class="sortDir" ng-class="{ active: isSorted('-origots' ) }">&#x25BC;</a>
+        </th>
+		 <th>
+         OTS ADJ
+          <a href="#" ng-click="sort('otsadj')" class="sortDir" ng-class="{ active: isSorted('otsadj') }">&#x25B2;</a>
+          <a href="#" ng-click="sort('-otsadj')" class="sortDir" ng-class="{ active: isSorted('-otsadj' ) }">&#x25BC;</a>
+        </th> 
+				  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                       </thead>
+    <tbody>
+    <tr ng-repeat="mes in fetcheddata|orderBy:predicate:reverse">
+    <td>{{ mes.lwsales }}</td>
+	<td>{{ mes.invtplnd }}</td>
+    <td>{{ mes.strnum }}</td>
+	<td>{{ mes.ssratturn }}</td>
+	<td>{{ mes.salesplnd }}</td>
+	<td>{{ mes.salesplndwktwo }}</td>
+	<td>{{ mes.salesplndbal }}</td>
+	<td>{{ mes.twinvt }}</td>
+	<td>{{ mes.otsweeks }}</td>
+	<td>{{ mes.lwdistreg }}</td>
+	<td ng-model="mes.origpct">{{ mes.origpct }}</td>
+	<td>{{ mes.wtddist }}</td>
+	<td ng-model="mes.origots">{{ mes.origots }}</td>
+	<td><input ng-model="mes.otsadj"></input></td>
+	<td><button class="btn btn-primary" type="button" ng-click="updateOTS(mes)">UPDATE</button></td>
+              </tr>
+              
+                        </tbody>
+
+                   </table>
+
+<div class="clearfix"></div>
+<!--                 <pagination 
+  ng-model="currentPage"
+  total-items="fetcheddata.length"
+  max-size="maxSize"  
+  boundary-links="true">
+</pagination> -->
+            </div>
+			<br>
+            
+        </div>
+	</div>
+</div>
+
+	</div>
+	
+<!-- 	  <div class="row">
+                            <div>
+                                <md-button class="md-raised md-primary" type="submit" ng-click=submitMyForm()>Search <i class="fa fa-search"></i></md-button>
+                            </div>
+							</div> -->
+    </section><!-- /.content -->

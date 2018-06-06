@@ -1,0 +1,22 @@
+NAME                            DOCKER REPO                                                  TAGS                         UPDATED
+mysql-57-rhel7                  172.30.1.1:5000/jenkinspring/mysql-57-rhel7                  latest                       2 weeks ago
+redhat-openjdk18-openshift      172.30.1.1:5000/jenkinspring/redhat-openjdk18-openshift      1.2,latest,1.3 + 2 more...   2 weeks ago
+springboot-maven3-centos        172.30.1.1:5000/jenkinspring/springboot-maven3-centos        latest                       2 weeks ago
+springbootapp                   172.30.1.1:5000/jenkinspring/springbootapp                   latest                       2 weeks ago
+springbootappimage              172.30.1.1:5000/jenkinspring/springbootappimage              latest                       2 weeks ago
+webserver30-tomcat8-openshift   172.30.1.1:5000/jenkinspring/webserver30-tomcat8-openshift   latest                       2 weeks ago
+NAME                            DOCKER REPO                                                  TAGS                           UPDATED
+mysql-57-rhel7                  172.30.1.1:5000/jenkinspring/mysql-57-rhel7                  latest                         2 weeks ago
+redhat-openjdk18-openshift      172.30.1.1:5000/jenkinspring/redhat-openjdk18-openshift      1.3-4,1.2,latest + 2 more...   2 weeks ago
+springboot-maven3-centos        172.30.1.1:5000/jenkinspring/springboot-maven3-centos        latest                         2 weeks ago
+springbootapp                   172.30.1.1:5000/jenkinspring/springbootapp                   latest                         2 weeks ago
+springbootappimage              172.30.1.1:5000/jenkinspring/springbootappimage              latest                         2 weeks ago
+webserver30-tomcat8-openshift   172.30.1.1:5000/jenkinspring/webserver30-tomcat8-openshift   latest                         2 weeks ago
+oc get is 
+NAME                            DOCKER REPO                                                  TAGS                           UPDATED
+mysql-57-rhel7                  172.30.1.1:5000/jenkinspring/mysql-57-rhel7                  latest                         2 weeks ago
+redhat-openjdk18-openshift      172.30.1.1:5000/jenkinspring/redhat-openjdk18-openshift      1.3-4,1.2,latest + 2 more...   2 weeks ago
+springboot-maven3-centos        172.30.1.1:5000/jenkinspring/springboot-maven3-centos        latest                         2 weeks ago
+springbootapp                   172.30.1.1:5000/jenkinspring/springbootapp                   latest                         2 weeks ago
+springbootappimage              172.30.1.1:5000/jenkinspring/springbootappimage              latest                         2 weeks ago
+webserver30-tomcat8-openshift   172.30.1.1:5000/jenkinspring/webserver30-tomcat8-openshift   latest                         2 weeks ago

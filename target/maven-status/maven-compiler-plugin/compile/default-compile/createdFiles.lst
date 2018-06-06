@@ -1,0 +1,4 @@
+com\wipro\Application.class
+com\wipro\RecordRepository.class
+com\wipro\Record.class
+com\wipro\HomeController.class

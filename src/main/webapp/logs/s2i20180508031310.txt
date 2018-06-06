@@ -1,0 +1,1 @@
+s2i build request submitted...... with reqId:20180508031310Process Done already
